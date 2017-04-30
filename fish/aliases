@@ -1,0 +1,7 @@
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ll='ls -AlG --time-style="+%F %a %T"'
+alias l='ls -GCF --human-readable --color=auto'
