@@ -1,3 +1,20 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- shell:
+    - [
+        "git submodule update --init --recursive",
+        "Installing submodules"
+    ]
+
+- clean:
+    - '~'
+    - ~/.config
+
+- link:
+    ~/.dotfiles: ""
+    ~/.vimrc:
+    ~/.vim:
+
