@@ -3,5 +3,5 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ll='ls -AlG --time-style="+%F %a %T"'
-alias l='ls -GCF --human-readable --color=auto'
+alias ll='ls -AlG'
+alias l='ls -GCF'
