@@ -19,8 +19,8 @@
 
 - link:
     ~/.dotfiles: ""
-    ~/.vimrc:
     ~/.vim:
+    ~/.vimrc:
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/abbrs: fish/abbrs
     ~/.config/fish/aliases: fish/aliases

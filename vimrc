@@ -1,11 +1,11 @@
+set nocompatible                " choose no compatibility with legacy vi
 execute pathogen#infect()
 execute pathogen#helptags()
-
-set nocompatible                " choose no compatibility with legacy vi
 syntax on
+filetype plugin indent on       " load file type plugins + indentation
+
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
 set mouse=a                     " mousing about!
 set number                      " line numbers!
 set updatetime=250              " faster update for git gutter
