@@ -51,9 +51,9 @@ set wildignore=*.pyc,*/.git/*,*/.DS_Store
 "" Map word jumping to Alt + arrow L/R
 nmap <silent> <Esc><Esc>[C e
 nmap <silent> <Esc><Esc>[D b
-"" Use Alt + arrow U/D to jump multiple lines
-nmap <silent> <Esc><Esc>[A 5k
-nmap <silent> <Esc><Esc>[B 5j
+"" Use Alt + arrow U/D to jump to blank lines 
+nmap <silent> <Esc><Esc>[A {
+nmap <silent> <Esc><Esc>[B }
 
 "" NERDTree
 let g:NERDTreeDirArrowExpandable = '📁'
