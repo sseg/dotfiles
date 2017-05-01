@@ -12,31 +12,48 @@ set number                      " line numbers!
 set updatetime=250              " faster update for git gutter
 autocmd vimenter * NERDTree     " start NERDTree for every session
 
+"" Redirect vim shell output
+set shellpipe=>
+
 "" Leader key and leader shortcuts
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>f :Ack!<Space>
-nnoremap <Leader>p :CommandT<CR>
+nnoremap <Leader>e :Ack! <cword><CR>
+vnoremap <Leader>e y:Ack! <C-r>=fnameescape(@")<CR><CR>
+nnoremap <Leader>o :CommandT<CR>
 nnoremap <Leader>q :qa<CR>
 nnoremap <Leader><Leader> V
-nnoremap <Leader><Esc> :noh<CR>
+nnoremap <Leader><CR> :noh<CR>
 nnoremap <Leader>_ :split<CR>
 nnoremap <Leader><Bar> :vsplit<CR>
+nnoremap <Leader><Esc>[A :wincmd k<CR>
+nnoremap <Leader><Esc>[B :wincmd j<CR>
+nnoremap <Leader><Esc>[C :wincmd l<CR>
+nnoremap <Leader><Esc>[D :wincmd h<CR>
 
 "" Cursor scrolling
 set scrolloff=5
+
+"" Undo files
+if !isdirectory("/tmp/vim_undo")
+    call mkdir("/tmp/vim_undo", "", 0700)
+endif
+set undodir=/tmp/vim_undo
+set undofile
 
 "" File menu matching
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.pyc,*/.git/*,*/.DS_Store
 
-"" Map window selection to Alt + arrow key
-nmap <silent>  <Esc><Esc>[A :wincmd k<CR>
-nmap <silent> <Esc><Esc>[B :wincmd j<CR>
-nmap <silent> <Esc><Esc>[C :wincmd l<CR>
-nmap <silent> <Esc><Esc>[D :wincmd h<CR>
+"" Map word jumping to Alt + arrow L/R
+nmap <silent> <Esc><Esc>[C e
+nmap <silent> <Esc><Esc>[D b
+"" Use Alt + arrow U/D to jump multiple lines
+nmap <silent> <Esc><Esc>[A 5k
+nmap <silent> <Esc><Esc>[B 5j
 
 "" NERDTree
 let g:NERDTreeDirArrowExpandable = '📁'
