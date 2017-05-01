@@ -28,3 +28,9 @@
     ~/.config/fish/path: fish/path
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/completions: fish/completions
+
+- shell:
+    - [
+        "pushd . ;and cd ~/.vim/bundle/command-t/ruby/command-t ;and ruby extconf.rb ;and make ;and popd",
+        "Building C extensions for Commmand-T"
+    ]

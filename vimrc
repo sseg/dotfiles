@@ -2,7 +2,8 @@ set nocompatible                " choose no compatibility with legacy vi
 execute pathogen#infect()
 execute pathogen#helptags()
 syntax on
-filetype plugin indent on       " load file type plugins + indentation
+filetype plugin on
+filetype indent on
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -10,6 +11,26 @@ set mouse=a                     " mousing about!
 set number                      " line numbers!
 set updatetime=250              " faster update for git gutter
 autocmd vimenter * NERDTree     " start NERDTree for every session
+
+"" Leader key and leader shortcuts
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>f :Ack!<Space>
+nnoremap <Leader>p :CommandT<CR>
+nnoremap <Leader>q :qa<CR>
+nnoremap <Leader><Leader> V
+nnoremap <Leader><Esc> :noh<CR>
+nnoremap <Leader>_ :split<CR>
+nnoremap <Leader><Bar> :vsplit<CR>
+
+"" Cursor scrolling
+set scrolloff=5
+
+"" File menu matching
+set wildmenu
+set wildmode=list:longest,full
+set wildignore=*.pyc,*/.git/*,*/.DS_Store
 
 "" Map window selection to Alt + arrow key
 nmap <silent>  <Esc><Esc>[A :wincmd k<CR>
@@ -89,7 +110,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
 
 "" markdown plugin
 let g:vim_markdown_folding_disabled = 1
