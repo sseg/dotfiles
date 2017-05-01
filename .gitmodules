@@ -37,3 +37,12 @@
 [submodule "vim/bundle/rust.vim"]
 	path = vim/bundle/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "vim/bundle/SimpylFold"]
+	path = vim/bundle/SimpylFold
+	url = git@github.com:tmhedberg/SimpylFold.git
+[submodule "vim/bundle/FastFold"]
+	path = vim/bundle/FastFold
+	url = git@github.com:Konfekt/FastFold.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
