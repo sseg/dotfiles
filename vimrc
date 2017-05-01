@@ -29,10 +29,10 @@ nnoremap <Leader><Leader> V
 nnoremap <Leader><CR> :noh<CR>
 nnoremap <Leader>_ :split<CR>
 nnoremap <Leader><Bar> :vsplit<CR>
-nnoremap <Leader><Esc>[A :wincmd k<CR>
-nnoremap <Leader><Esc>[B :wincmd j<CR>
-nnoremap <Leader><Esc>[C :wincmd l<CR>
-nnoremap <Leader><Esc>[D :wincmd h<CR>
+nnoremap <Leader>k :wincmd k<CR>
+nnoremap <Leader>j :wincmd j<CR>
+nnoremap <Leader>l :wincmd l<CR>
+nnoremap <Leader>h :wincmd h<CR>
 
 "" Cursor scrolling
 set scrolloff=5
@@ -49,12 +49,12 @@ set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.pyc,*/.git/*,*/.DS_Store
 
-"" Map word jumping to Alt + arrow L/R
-nmap <silent> <Esc><Esc>[C e
-nmap <silent> <Esc><Esc>[D b
-"" Use Alt + arrow U/D to jump to blank lines 
-nmap <silent> <Esc><Esc>[A {
-nmap <silent> <Esc><Esc>[B }
+"" Map word jumping to Alt h/l 
+nmap <silent> ¬ e
+nmap <silent> ˙ b
+"" Use Alt j/k to jump to blank lines 
+nmap <silent> ˚ {
+nmap <silent> ∆ }
 
 "" NERDTree
 let g:NERDTreeDirArrowExpandable = '📁'
