@@ -1,4 +1,5 @@
 set nocompatible                " choose no compatibility with legacy vi
+set shell=/bin/bash
 execute pathogen#infect()
 execute pathogen#helptags()
 syntax on
