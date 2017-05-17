@@ -1,6 +1,6 @@
 set nocompatible                " choose no compatibility with legacy vi
 set shell=/bin/bash
-execute pathogen#infect()
+execute pathogen#infect('$HOME/.vim/bundle/{}')
 execute pathogen#helptags()
 syntax on
 filetype plugin on
@@ -33,6 +33,7 @@ nnoremap <Leader>k :wincmd k<CR>
 nnoremap <Leader>j :wincmd j<CR>
 nnoremap <Leader>l :wincmd l<CR>
 nnoremap <Leader>h :wincmd h<CR>
+nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
 
 "" Cursor scrolling
 set scrolloff=5
@@ -60,6 +61,7 @@ nmap <silent> ∆ }
 let g:NERDTreeDirArrowExpandable = '📁'
 let g:NERDTreeDirArrowCollapsible = '📂'
 let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.pyc$']
 
 function! NERDTreeHighlightFile(extension, fg, bg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
@@ -93,6 +95,7 @@ call NERDTreeHighlightFile('lock', 'cyan', 'black')
 "" Javascript
 let g:javascript_plugin_jsdoc = 1
 
+
 "" Linting
 let g:ale_linters = {
             \ 'javascript': ['eslint']
@@ -103,6 +106,7 @@ set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is four spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
+autocmd FileType python,javascipt autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -133,7 +137,8 @@ cnoreabbrev Ack Ack!
 let g:vim_markdown_folding_disabled = 1
 
 "" Folding
-set foldmethod=syntax
+set foldmethod=indent
+set foldnestmax=2
 
 "" Indent guides
 let g:indentLine_char = '┋'
