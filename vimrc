@@ -143,4 +143,8 @@ set foldnestmax=2
 "" Indent guides
 let g:indentLine_char = '┋'
 
+"" Insert mode
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
+
 autocmd VimEnter * wincmd p
