@@ -54,6 +54,11 @@ function fish_prompt
   set_color normal
 end
 
+function c
+  cd $argv
+  ls -lG
+end
+
 # pyenv
 status --is-interactive; and source (pyenv init -|psub)
 
