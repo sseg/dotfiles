@@ -35,6 +35,9 @@ nnoremap <Leader>l :wincmd l<CR>
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
 
+"" Use `jk` for <Esc>
+imap jk <Esc>
+
 "" Cursor scrolling
 set scrolloff=5
 
@@ -97,6 +100,7 @@ let g:javascript_plugin_jsdoc = 1
 
 
 "" Linting
+let g:ale_sign_column_always = 1
 let g:ale_linters = {
             \ 'javascript': ['eslint']
             \}
