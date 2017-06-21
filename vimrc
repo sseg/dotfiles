@@ -8,7 +8,6 @@ filetype indent on
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-set mouse=a                     " mousing about!
 set number                      " line numbers!
 set updatetime=250              " faster update for git gutter
 autocmd vimenter * NERDTree     " start NERDTree for every session
