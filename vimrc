@@ -99,10 +99,7 @@ let g:javascript_plugin_jsdoc = 1
 
 
 "" Linting
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-            \ 'javascript': ['eslint']
-            \}
+
 
 "" Whitespace
 set nowrap                      " don't wrap lines
