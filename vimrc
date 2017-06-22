@@ -99,7 +99,7 @@ let g:javascript_plugin_jsdoc = 1
 
 
 "" Linting
-
+let g:ale_linters = {'python': ['all']}
 
 "" Whitespace
 set nowrap                      " don't wrap lines
