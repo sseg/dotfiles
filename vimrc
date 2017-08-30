@@ -59,6 +59,9 @@ nmap <silent> ˙ b
 nmap <silent> ˚ {
 nmap <silent> ∆ }
 
+"" Color and theme
+set background=dark
+
 "" NERDTree
 let g:NERDTreeDirArrowExpandable = '📁'
 let g:NERDTreeDirArrowCollapsible = '📂'
