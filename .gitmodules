@@ -52,9 +52,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = git@github.com:vim-syntastic/syntastic.git
-[submodule "vim/bundle/jedi-vim"]
-	path = vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "vim/bundle/jedi"]
 	path = vim/bundle/jedi
 	url = git@github.com:davidhalter/jedi.git
