@@ -58,3 +58,6 @@
 [submodule "vim/bundle/jedi"]
 	path = vim/bundle/jedi
 	url = git@github.com:davidhalter/jedi.git
+[submodule "vim/bundle/airline"]
+	path = vim/bundle/airline
+	url = https://github.com/vim-airline/vim-airline
