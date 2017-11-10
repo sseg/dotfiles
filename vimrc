@@ -34,6 +34,12 @@ nnoremap <Leader>l :wincmd l<CR>
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
 
+"" Location navigation
+command! Lnext try | lnext | catch | lfirst | catch | endtry
+command! Lprev try | lprev | catch | llast | catch | endtry
+nnoremap <Leader>[ :Lprev<CR>
+nnoremap <Leader>] :Lnext<CR>
+
 "" Use `jk` for <Esc>
 imap jk <Esc>
 
@@ -102,8 +108,13 @@ let g:javascript_plugin_jsdoc = 1
 
 
 "" Linting
-let g:ale_linters = {'python': ['all']}
-let g:syntastic_check_on_open = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_linters = {
+\   'python': ['flake8', 'mypy']
+\}
+let g:ale_python_mypy_options = '--ignore-missing-imports'
+
 
 "" Whitespace
 set nowrap                      " don't wrap lines

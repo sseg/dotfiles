@@ -6,7 +6,7 @@
 	url = git@github.com:mileszs/ack.vim.git
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
+	url = https://github.com/w0rp/ale
 [submodule "vim/bundle/auto-pairs"]
 	path = vim/bundle/auto-pairs
 	url = git://github.com/jiangmiao/auto-pairs.git
@@ -49,9 +49,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "vim/bundle/jedi"]
 	path = vim/bundle/jedi
 	url = git@github.com:davidhalter/jedi.git
