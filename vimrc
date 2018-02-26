@@ -18,27 +18,35 @@ set shellpipe=>
 "" Leader key and leader shortcuts
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>f :Ack!<Space>
-nnoremap <Leader>e :Ack! <cword><CR>
-vnoremap <Leader>e y:Ack! <C-r>=fnameescape(@")<CR><CR>
+nnoremap <Leader><Bar> :vsplit<CR>
+nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
+nnoremap <Leader><CR> :noh<CR>
+nnoremap <Leader><Leader> V
+nnoremap <Leader>_ :split<CR>
+nnoremap <Leader>dd :tnext<CR>          " next definition
+nnoremap <Leader>e :Ack! <cword><CR>    " find current word
+nnoremap <Leader>f :Ack!<Space>         " find
+nnoremap <Leader>gb <c-t>               " go back
+nnoremap <Leader>gd <c-]>               " goto definition
+nnoremap <Leader>gt :!ctags --extra=+f -R *<CR><CR> " generate tags
+nnoremap <Leader>h :wincmd h<CR>
+nnoremap <Leader>j :wincmd j<CR>
+nnoremap <Leader>k :wincmd k<CR>
+nnoremap <Leader>l :wincmd l<CR>
 nnoremap <Leader>o :CommandT<CR>
 nnoremap <Leader>q :qa<CR>
-nnoremap <Leader><Leader> V
-nnoremap <Leader><CR> :noh<CR>
-nnoremap <Leader>_ :split<CR>
-nnoremap <Leader><Bar> :vsplit<CR>
-nnoremap <Leader>k :wincmd k<CR>
-nnoremap <Leader>j :wincmd j<CR>
-nnoremap <Leader>l :wincmd l<CR>
-nnoremap <Leader>h :wincmd h<CR>
-nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
+nnoremap <Leader>w :w<CR>
+vnoremap <Leader>e y:Ack! <C-r>=fnameescape(@")<CR><CR>
 
 "" Location navigation
 command! Lnext try | lnext | catch | lfirst | catch | endtry
 command! Lprev try | lprev | catch | llast | catch | endtry
 nnoremap <Leader>[ :Lprev<CR>
 nnoremap <Leader>] :Lnext<CR>
+
+"" Add newlines without entering insert mode
+nnoremap o o<Esc>
+nnoremap O O<Esc>
 
 "" Use `jk` for <Esc>
 imap jk <Esc>
@@ -72,7 +80,7 @@ set background=dark
 let g:NERDTreeDirArrowExpandable = '📁'
 let g:NERDTreeDirArrowCollapsible = '📂'
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.mypy_cache$', '\.egg-info$', '__pycache__']
 
 function! NERDTreeHighlightFile(extension, fg, bg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
@@ -113,8 +121,7 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
 \   'python': ['flake8', 'mypy']
 \}
-let g:ale_python_mypy_options = '--ignore-missing-imports'
-
+let g:ale_python_mypy_options = '--strict'
 
 "" Whitespace
 set nowrap                      " don't wrap lines

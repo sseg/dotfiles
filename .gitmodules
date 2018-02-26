@@ -55,3 +55,9 @@
 [submodule "vim/bundle/airline"]
 	path = vim/bundle/airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/bundle/vim-elixir"]
+	path = vim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/bundle/vim-flow"]
+	path = vim/bundle/vim-flow
+	url = git://github.com/flowtype/vim-flow.git
