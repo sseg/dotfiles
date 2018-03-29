@@ -15,12 +15,18 @@
     - '~/.config/fish'
     - '~/.config/fish/functions'
     - '~/.config/fish/completions'
+    - '~/.config/nvim'
+    - '~/.config/nvim/init.vim'
     - '~/.vim'
+    - '~/.oni'
 
 - link:
     ~/.dotfiles: ""
     ~/.vim:
+    ~/.config/nvim: vim
     ~/.vimrc:
+    ~/.config/nvim/init.vim: vimrc 
+    ~/.oni:
     ~/.gitignore_global:
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/abbrs: fish/abbrs

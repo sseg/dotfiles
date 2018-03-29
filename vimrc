@@ -66,10 +66,10 @@ set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.pyc,*/.git/*,*/.DS_Store
 
-"" Map word jumping to Alt h/l 
+"" Map word jumping to Alt h/l
 nmap <silent> ¬ e
 nmap <silent> ˙ b
-"" Use Alt j/k to jump to blank lines 
+"" Use Alt j/k to jump to blank lines
 nmap <silent> ˚ {
 nmap <silent> ∆ }
 
@@ -128,7 +128,7 @@ set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is four spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
-autocmd FileType python,javascipt autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType python,javascipt,markdown,go autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 "" Searching
 set hlsearch                    " highlight matches
