@@ -12,21 +12,24 @@
 - clean:
     - '~'
     - '~/.config'
+    - '~/.config/alacritty'
     - '~/.config/fish'
     - '~/.config/fish/functions'
     - '~/.config/fish/completions'
     - '~/.config/nvim'
     - '~/.config/nvim/init.vim'
     - '~/.vim'
-    - '~/.oni'
+    - '~/.config/oni'
 
 - link:
     ~/.dotfiles: ""
     ~/.vim:
     ~/.config/nvim: vim
     ~/.vimrc:
+    ~/.tmux.conf:
     ~/.config/nvim/init.vim: vimrc 
-    ~/.oni:
+    ~/.config/oni: oni
+    ~/.config/alacritty: alacritty
     ~/.gitignore_global:
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/abbrs: fish/abbrs

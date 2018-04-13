@@ -8,7 +8,7 @@ export const activate = (oni: Oni.Plugin.Api) => {
     //
     // Add input bindings here:
     //
-    // oni.input.bind("<c-enter>", () => console.log("Control+Enter was pressed"))
+    // oni.input.bind("<m-s-p>", () => oni.open)
 
     //
     // Or remove the default bindings here by uncommenting the below line:
@@ -23,7 +23,7 @@ export const deactivate = (oni: Oni.Plugin.Api) => {
 
 export const configuration = {
     // Vim configs
-    "oni.useDefaultConfig": true,
+    "oni.useDefaultConfig": false,
     "oni.loadInitVim": true,
 
     // Appearance 
@@ -36,6 +36,12 @@ export const configuration = {
 
     // Workspace
     "oni.bookmarks": ["~/work/", "~/sseg/"],
+    "environment.additionalPaths": [
+        "/usr/bin",
+        "/usr/local/bin",
+        "~/.pyenv/shims",
+        "~/go/bin",
+    ],
 
     // Languages
     "language.go.languageServer.rootFiles": [".git"],
@@ -43,5 +49,5 @@ export const configuration = {
     "language.go.languageServer.arguments": ["--gocodecompletion", "--freeosmemory", "false"],
     
     "language.python.languageServer.command": ["pyls"],
-    "language.python.languageServer.arguments": ["-vv", "python"],
+    "language.python.languageServer.arguments": ["-vv"],
 }

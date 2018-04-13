@@ -77,8 +77,8 @@ nmap <silent> ∆ }
 set background=dark
 
 "" NERDTree
-let g:NERDTreeDirArrowExpandable = '📁'
-let g:NERDTreeDirArrowCollapsible = '📂'
+" let g:NERDTreeDirArrowExpandable = '📁'
+" let g:NERDTreeDirArrowCollapsible = '📂'
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.pyc$', '\.mypy_cache$', '\.egg-info$', '__pycache__']
 
