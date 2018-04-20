@@ -31,6 +31,7 @@
     ~/.config/oni: oni
     ~/.config/alacritty: alacritty
     ~/.gitignore_global:
+    ~/.gitconfig:
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/abbrs: fish/abbrs
     ~/.config/fish/aliases: fish/aliases

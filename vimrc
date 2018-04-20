@@ -1,5 +1,7 @@
 set nocompatible                " choose no compatibility with legacy vi
 set shell=/bin/bash
+set t_Co=256
+set mouse=a
 execute pathogen#infect('$HOME/.vim/bundle/{}')
 execute pathogen#helptags()
 syntax on
@@ -23,12 +25,25 @@ nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
 nnoremap <Leader><CR> :noh<CR>
 nnoremap <Leader><Leader> V
 nnoremap <Leader>_ :split<CR>
-nnoremap <Leader>dd :tnext<CR>          " next definition
-nnoremap <Leader>e :Ack! <cword><CR>    " find current word
-nnoremap <Leader>f :Ack!<Space>         " find
-nnoremap <Leader>gb <c-t>               " go back
-nnoremap <Leader>gd <c-]>               " goto definition
-nnoremap <Leader>gt :!ctags --extra=+f -R *<CR><CR> " generate tags
+
+"" next definition
+nnoremap <Leader>dd :tnext<CR>
+
+"" find current word
+nnoremap <Leader>e :Ack! <cword><CR>
+
+"" find
+nnoremap <Leader>f :Ack!<Space>
+
+"" go to definition
+nnoremap <Leader>gd <c-]>
+
+"" go back
+nnoremap <Leader>gb <c-t>
+
+"" generate tags
+nnoremap <Leader>gt :!ctags --extra=+f -R *<CR><CR>
+
 nnoremap <Leader>h :wincmd h<CR>
 nnoremap <Leader>j :wincmd j<CR>
 nnoremap <Leader>k :wincmd k<CR>

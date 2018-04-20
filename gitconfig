@@ -1,0 +1,36 @@
+# use separate file for username / github token / etc
+[include]
+  path = ~/.gitconfig.local
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+[alias]
+    aliases = ! git config --get-regexp ^alias. | sed -e s/^alias.// -e s/\\ /\\ =\\ /
+    who = shortlog -n -s --no-merges
+	branches = branch -a
+	tags = tag
+	stashes = stash list
+	unstage = reset -q HEAD --
+	amend = commit -a --amend
+	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+	discard = checkout --
+    pop = reset HEAD~
+	edit = !vim -O $(git status --porcelain | awk '{print $2}')
+
+[push]
+	default = simple
+
+[credential]
+	helper = osxkeychain
+
+[rerere]
+	enabled = true
+
+[pager]
+    # insanely beautiful diffs ==> npm install -g diff-so-fancy
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+
+[diff]
+    compactionHeuristic = true

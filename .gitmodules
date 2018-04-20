@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-flow"]
 	path = vim/bundle/vim-flow
 	url = git://github.com/flowtype/vim-flow.git
+[submodule "vim/bundle/vim-jsdoc"]
+	path = vim/bundle/vim-jsdoc
+	url = https://github.com/heavenshell/vim-jsdoc.git
