@@ -19,7 +19,6 @@
     - '~/.config/nvim'
     - '~/.config/nvim/init.vim'
     - '~/.vim'
-    - '~/.config/oni'
 
 - link:
     ~/.dotfiles: ""
@@ -28,7 +27,6 @@
     ~/.vimrc:
     ~/.tmux.conf:
     ~/.config/nvim/init.vim: vimrc 
-    ~/.config/oni: oni
     ~/.config/alacritty: alacritty
     ~/.gitignore_global:
     ~/.gitconfig:
