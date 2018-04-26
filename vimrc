@@ -136,13 +136,18 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
 \   'python': ['flake8', 'mypy']
 \}
-let g:ale_python_mypy_options = '--strict'
+let g:ale_python_mypy_options = ''
 
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " a tab is four spaces
 set expandtab                   " use spaces, not tabs
 set backspace=indent,eol,start  " backspace through everything in insert mode
+
+" sometimes tabs are 2 spaces
+au FileType javascript setl sw=2 sts=2 et
+
+" remove trailing whitespace
 autocmd FileType python,javascipt,markdown,go autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 "" Searching
@@ -185,3 +190,11 @@ autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
 
 autocmd VimEnter * wincmd p
+
+" Emmet abbreviation settings
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings= {
+\   'javascript.jsx' : {
+\       'extends' : 'jsx',
+\   },
+\ }

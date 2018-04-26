@@ -239,6 +239,10 @@ key_bindings:
   - { key: K,        mods: Command, chars: "\x02\x6b"                    }
   - { key: L,        mods: Command, chars: "\x02\x6c"                    }
   - { key: T,        mods: Command, chars: "\x02\x63"                    }
+  - { key: N,        mods: Command, command: {
+        program: "open",
+        args: ["-n", "/Applications/Alacritty.app"] 
+  }}
   - { key: Key0,     mods: Command, chars: "\x02\x30"                    }
   - { key: Key1,     mods: Command, chars: "\x02\x31"                    }
   - { key: Key2,     mods: Command, chars: "\x02\x32"                    }

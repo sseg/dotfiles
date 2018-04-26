@@ -64,3 +64,9 @@
 [submodule "vim/bundle/vim-jsdoc"]
 	path = vim/bundle/vim-jsdoc
 	url = https://github.com/heavenshell/vim-jsdoc.git
+[submodule "vim/bundle/vim-jsx"]
+	path = vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/bundle/emmet-vim"]
+	path = vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
