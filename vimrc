@@ -136,7 +136,7 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_linters = {
 \   'python': ['flake8', 'mypy']
 \}
-let g:ale_python_mypy_options = ''
+let g:ale_python_mypy_options = '--strict'
 
 "" Whitespace
 set nowrap                      " don't wrap lines
