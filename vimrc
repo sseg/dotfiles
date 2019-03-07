@@ -79,7 +79,7 @@ set undofile
 "" File menu matching
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=*.pyc,*/.git/*,*/.DS_Store
+set wildignore=*.pyc,*/.git/*,*/.DS_Store,*/node_modules/*
 
 "" Map word jumping to Alt h/l
 nmap <silent> ¬ e
@@ -129,6 +129,8 @@ call NERDTreeHighlightFile('lock', 'cyan', 'black')
 "" Javascript
 let g:javascript_plugin_jsdoc = 1
 
+"" Auto-close HTML
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.jinja2,*.j2"
 
 "" Linting
 let g:airline#extensions#ale#enabled = 1

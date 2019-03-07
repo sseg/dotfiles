@@ -5,3 +5,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ll='ls -AlG'
 alias l='ls -GCF'
+alias cat='bat'
+alias fuz="fzf --preview 'bat --color always {}'"
+alias top='htop'
+

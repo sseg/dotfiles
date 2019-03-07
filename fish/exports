@@ -2,4 +2,5 @@ set -x EDITOR vi
 set -x VISUAL vim
 set -x SUDO_EDITOR $VISUAL
 set -x GOPATH $HOME/go
+set -x FZF_DEFAULT_OPTS "--bind='ctrl-o:execute(code {})+abort'"
 
