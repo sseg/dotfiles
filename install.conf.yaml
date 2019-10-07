@@ -11,14 +11,6 @@
 
 - clean:
     - '~'
-    - '~/.config'
-    - '~/.config/alacritty'
-    - '~/.config/fish'
-    - '~/.config/fish/functions'
-    - '~/.config/fish/completions'
-    - '~/.config/nvim'
-    - '~/.config/nvim/init.vim'
-    - '~/.vim'
 
 - link:
     ~/.dotfiles: ""
@@ -37,6 +29,9 @@
     ~/.config/fish/path: fish/path
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/completions: fish/completions
+    "~/Library/Application Support/Code/User/settings.json":
+        path: vscode/settings.json
+        create: true
 
 - shell:
     - [

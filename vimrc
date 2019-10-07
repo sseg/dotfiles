@@ -12,7 +12,6 @@ set encoding=utf-8
 set showcmd                     " display incomplete commands
 set number                      " line numbers!
 set updatetime=250              " faster update for git gutter
-autocmd vimenter * NERDTree     " start NERDTree for every session
 
 "" Redirect vim shell output
 set shellpipe=>
@@ -21,7 +20,6 @@ set shellpipe=>
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 nnoremap <Leader><Bar> :vsplit<CR>
-nnoremap <Leader><Bslash> :NERDTreeToggle<CR>
 nnoremap <Leader><CR> :noh<CR>
 nnoremap <Leader><Leader> V
 nnoremap <Leader>_ :split<CR>
@@ -91,40 +89,6 @@ nmap <silent> ∆ }
 "" Color and theme
 set background=dark
 
-"" NERDTree
-" let g:NERDTreeDirArrowExpandable = '📁'
-" let g:NERDTreeDirArrowCollapsible = '📂'
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\.pyc$', '\.mypy_cache$', '\.egg-info$', '__pycache__']
-
-function! NERDTreeHighlightFile(extension, fg, bg)
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:bg .' guifg='. a:fg
-endfunction
-
-" source files
-call NERDTreeHighlightFile('py', 'green', 'black')
-call NERDTreeHighlightFile('js', 'green', 'black')
-call NERDTreeHighlightFile('sql', 'green', 'black')
-
-" data files
-call NERDTreeHighlightFile('json', 'blue', 'black')
-call NERDTreeHighlightFile('yaml', 'blue', 'black')
-call NERDTreeHighlightFile('yml', 'blue', 'black')
-
-" readables
-call NERDTreeHighlightFile('md', 'red', 'black')
-call NERDTreeHighlightFile('rst', 'red', 'black')
-
-" executables and related
-call NERDTreeHighlightFile('Makefile', 'magenta', 'black')
-call NERDTreeHighlightFile('sh', 'magenta', 'black')
-
-call NERDTreeHighlightFile('in', 'cyan', 'black')
-call NERDTreeHighlightFile('txt', 'cyan', 'black')
-call NERDTreeHighlightFile('cfg', 'cyan', 'black')
-call NERDTreeHighlightFile('opts', 'cyan', 'black')
-call NERDTreeHighlightFile('lock', 'cyan', 'black')
 
 "" Javascript
 let g:javascript_plugin_jsdoc = 1

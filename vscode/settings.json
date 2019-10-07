@@ -1,0 +1,140 @@
+{
+    /*** GENERAL SETTINGS ***/
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.lineNumbers": "on",
+    "editor.formatOnSave": false,
+    "terminal.integrated.shell.osx": "fish",
+    /*** STYLE SETTINGS ***/
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Default High Contrast",
+    /*** TELEMETRY SETTINGS ***/
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    /*** VIM SETTINGS ***/
+    "vim.leader": "<space>",
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [{
+        // jk -> to normal mode
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+      },
+      {
+        // /todo -> TODO(sseg): 
+        "before": ["/", "t", "o", "d", "o"],
+        "after": ["T", "O", "D", "O", "(", "s", "s", "e", "g", ")", ":"]
+      },
+      {
+        // /note -> NOTE(sseg): 
+        "before": ["/", "n", "o", "t", "e"],
+        "after": ["N", "O", "T", "E", "(", "s", "s", "e", "g", ")", ":"]
+      }
+    ],
+    "vim.normalModeKeyBindings": [{
+        // Leader-k-i -> show tooltip
+        "before": ["<leader>", "k", "i"],
+        "commands": [{
+          "command": "editor.action.showHover"
+        }]
+      },
+      {
+        // Leader-k-o -> show code actions
+        "before": ["<leader>", "k", "o"],
+        "commands": [{
+          "command": "editor.action.codeAction"
+        }]
+      },
+      {
+        // Leader-k-p -> peek definition
+        "before": ["<leader>", "k", "p"],
+        "commands": [{
+          "command": "editor.action.previewDeclaration"
+        }]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [{
+        // Leader-Enter -> remove highlighting
+        "before": ["<leader>", "<CR>"],
+        "after": [],
+        "commands": [{
+          "command": ":nohl"
+        }]
+      },
+      {
+        // Leader-q -> quit all buffers
+        "before": ["<leader>", "q"],
+        "after": [],
+        "commands": [{
+          "command": ":qa"
+        }]
+      },
+      {
+        // Leader-w -> write current buffer without formatting
+        "before": ["<leader>", "w"],
+        "after": [],
+        "commands": [{
+          "command": "workbench.action.files.saveWithoutFormatting"
+        }]
+      },
+      {
+        // Leader-h -> focus to the left
+        "before": ["<leader>", "h"],
+        "after": [],
+        "commands": [{
+          "command": "workbench.action.focusPreviousGroup"
+        }]
+      },
+      {
+        // Leader-l -> focus to the left
+        "before": ["<leader>", "l"],
+        "after": [],
+        "commands": [{
+          "command": "workbench.action.focusNextGroup"
+        }]
+      },
+      {
+        // Leader-| -> split editor
+        "before": ["<leader>", "|"],
+        "after": [],
+        "commands": [{
+          "command": "workbench.action.splitEditor"
+        }]
+      },
+      {
+        // Leader-\ -> toggle sidebar
+        "before": ["<leader>", "\\"],
+        "after": [],
+        "commands": [{
+          "command": "workbench.action.toggleSidebarVisibility"
+        }]
+      }
+    ],
+    "window.zoomLevel": 0,
+    "vim.disableExtension": false,
+    "files.exclude": {
+      "**/.pyc": true
+    },
+    "rust.all_features": true,
+    "rust.unstable_features": true,
+    "git.autofetch": true,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "rust.rustup": {
+      "toolchain": "nightly-x86_64-apple-darwin",
+      "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.mode": "rls",
+    "rust.rls": {
+      "useRustfmt": true
+    },
+    "[rust]": {},
+    "python.formatting.provider": "black",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "[python]": {},
+    "java.configuration.checkProjectSettingsExclusions": false,
+}
