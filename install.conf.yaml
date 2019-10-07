@@ -29,7 +29,5 @@
     ~/.config/fish/path: fish/path
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/completions: fish/completions
-    "~/Library/Application Support/Code/User/settings.json":
-        path: vscode/settings.json
-        create: true
+    "~/Library/Application Support/Code/User/settings.json": vscode/settings.json
 
