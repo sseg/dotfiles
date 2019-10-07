@@ -126,7 +126,6 @@ target/
 .python-version
 celerybeat-schedule.*
 .ropeproject
-/site
 .mypy_cache/
 
 # Rust #

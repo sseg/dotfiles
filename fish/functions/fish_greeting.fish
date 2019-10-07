@@ -1,3 +1,3 @@
 function fish_greeting
-	ponysay (fortune -as)
+	ponysay (fortune -s)
 end
