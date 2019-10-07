@@ -1,1 +1,1 @@
-/Users/sseguin/home/repos/github.com/sseg/dotfiles/vimrc
+/Users/sseg/home/repos/github.com/sseg/dotfiles/vimrc

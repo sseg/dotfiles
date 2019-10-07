@@ -33,8 +33,3 @@
         path: vscode/settings.json
         create: true
 
-- shell:
-    - [
-        "pushd . ;and cd ~/.vim/bundle/command-t/ruby/command-t ;and ruby extconf.rb ;and make ;and popd",
-        "Building C extensions for Commmand-T"
-    ]
